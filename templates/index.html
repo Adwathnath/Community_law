@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiCgdLxWQ7iX-SF_CkEcTYS9dX_M0MdWESB9r75eWYFw&s" type="image/x-icon">
+    <style>
+        .right2{
+            display: none;
+        }
+    </style>
+    <title>New Chat</title>
+</head>
+<body class="bg-white">
+    <div class="flex h-[100vh] text-black">
+        <div class="left bg-[#E3E3E3] w-2/12">
+            
+            <button class="w-[90%] py-2 m-2 px-10 space-x-2 border-white border rounded-md flex mx-4 justify-start items-center
+            hover:bg-gray-800">
+                 <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                 class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="5" x2="12" y2="19"
+                 ></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                <span>New Chat</span>
+            </button>
+            <div class="text-xs m-2 mx-8">Today</div>
+
+            <div class="chats flex flex-col justify-center items-center space-y-2">
+
+                {% for chat in myChats %}
+
+              
+                <div class="chat space-x-2 opacity-80 w-[90%] px-5 py-2 rounded-md bg-gray-600 cursor-pointer flex justify-start items-center">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" 
+                    stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path 
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <span>{{chat.question}}</span>
+                </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+        <div class="right1 w-10/12 flex justify-center items-center flex-col">
+            <div class="text-center w-full text-4xl font-bold my-7 text-black">
+                Community Law
+            </div>
+            <div class="itemsrow flex py-4 w-[48vw] justify-around">
+                <div class="example flex flex-col justify-center items-center">
+                    <div class="py-4">
+                        <div class="text-2xl text-black">
+                            Examples
+                        </div>    
+                    </div>
+                    <button class="bg-gray-500 w-[16vw] text-white text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">
+                        Explain about the working of the panchayath system ?
+                    </button>
+                    <button class="bg-gray-500 w-[16vw] text-white text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">
+                        Explain about the working of the panchayath system ?
+                    </button>
+                    <button class="bg-gray-500 w-[16vw] text-white text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">
+                        Explain about the working of the panchayath system ?
+                    </button>
+                </div>
+                <div class="cap flex flex-col justify-center items-center">
+                    <div class="py-4 text-2xl text-black">
+                        Capabilities
+                    </div>
+                    <button class="bg-gray-500 w-[16vw] text-white text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">
+                        Explain about the working of the panchayath system ?
+                    </button>
+                    <button class="bg-gray-500 w-[16vw] text-white text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">
+                        Explain about the working of the panchayath system ?
+                    </button>
+                    <button class="bg-gray-500 w-[16vw] text-white text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">
+                        Explain about the working of the panchayath system ?
+                    </button>
+                </div>
+                <div class="lim flex flex-col justify-center items-center">
+                    <div class="py-4 text-2xl text-black"> 
+                        Limitations
+                    </div>
+                    <button class="bg-gray-500 w-[16vw] text-white text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">
+                        Explain about the working of the panchayath system ?
+                    </button>
+                    <button class="bg-gray-500 w-[16vw] text-white text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">
+                        Explain about the working of the panchayath system ?
+                    </button>
+                    <button class="bg-gray-500 w-[16vw] text-white text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">
+                        Explain about the working of the panchayath system ?
+                    </button>
+                </div>
+
+            </div>   
+
+            <div class="input w-full text-center my-24 flex items-center justify-center flex-col">
+                <div class="buttonsvg pl-16 w-[50vw] flex">
+                <input class="w-full p-4 bg-white rounded-md placeholder-black text-black" placeholder="Send a message"
+                 type="text" name="text" id="questionInput">
+                 <button class="relative -left-20 pl-10 text-black" id="sendButton">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                    stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http:/www.w3.org/2000/svg"><line 
+                    x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                 </button>
+                 </div>
+                 <div class="text-xs py-2 opacity-70 text-red-600"> Free Project preview. Community Law may produce inaccurate information about the lsgd laws.
+                 </div>
+            </div>
+        </div>
+        <div class="right2 w-full flex flex-col items-center h-fit">
+            <div class="box1 m-auto py-7 flex justify-start w-[40vw] items-center space-x-6">
+                <img class="w-9" src="https://lh3.googleusercontent.com/a/AEdFTp60EAMGTWIYrHDJISrMOADg1QI3zjqKh5lM-3Mv=s96-c" alt="">
+                <div id="question2">
+                    Loading...
+                </div>
+            </div>
+            <div class="box2 bg-gray-200 py-7 flex justify-center w-full items-center">
+                <div class="box w-[40vw] flex justify-start space-x-6">
+                    <img class="w-9 h-9" src="https://lh3.googleusercontent.com/a/AEdFTp60EAMGTWIYrHDJISrMOADg1QI3zjqKh5lM-3Mv=s96-c" alt="">
+                    <div class="flex space-y-4 flex-col">
+                        <div id="question1">
+                            Loading...
+                        </div>
+                        <div id="solution">
+                            Loading...
+                        </div>
+                    </div>
+                </div>    
+            </div>
+
+            <div class="input pt-60 w-full text-center mt-22 my-24 flex items-center justify-center flex-col">
+                <div class="buttonsvg pl-16 w-[50vw] flex">
+                <input class="w-full p-4 bg-white rounded-md placeholder-black text-black" placeholder="Send a message"
+                 type="text" name="text" id="questionInput2">
+                 <button class="relative -left-20 pl-10 text-black" id="sendButton2">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                    stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http:/www.w3.org/2000/svg"><line 
+                    x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                 </button>
+                 </div>
+                 <div class="text-xs py-2 opacity-70 text-black"> Free Project preview. Community Law may produce inaccurate information about the lsgd laws.
+                 </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="/static/js/script.js">
+
+    </script>
+</body>
+</html>
