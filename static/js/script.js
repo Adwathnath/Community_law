@@ -1,5 +1,6 @@
 
 
+
 // Example POST method implementation
 async function postData(url = "", data= {}) {
     // Default option are marked with *
@@ -28,11 +29,13 @@ sendButton.addEventListener("click", async ()=>{
     let result = await postData("/api", {"question": questionInput})
     solution.innerHTML = result.answer
     document.querySelector(".box2").scrollTop = document.querySelector(".box2").scrollHeight
+    
 
 })
 
 sendButton2.addEventListener("click", async ()=>{
     
+    solution.innerHTML = "Loading..."
     questionInput2 = document.getElementById("questionInput2").value;
     document.getElementById("questionInput2").value = "";
     document.querySelector(".right2").style.display = "block"
@@ -46,4 +49,4 @@ sendButton2.addEventListener("click", async ()=>{
     solution.innerHTML = result.answer
     document.querySelector(".box2").scrollTop = document.querySelector(".box2").scrollHeight
 
-})
+}) 

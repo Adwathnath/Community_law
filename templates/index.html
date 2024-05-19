@@ -5,9 +5,25 @@
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiCgdLxWQ7iX-SF_CkEcTYS9dX_M0MdWESB9r75eWYFw&s" type="image/x-icon">
     <style>
-        .right2{
-            display: none;
+
+          html, body {
+            height: 100%;
+            overflow: hidden; /* Prevent the body from scrolling */
         }
+        .right2 {
+            display: none;
+            height: 100vh; /* Ensure it takes up full viewport height */
+            overflow-y: auto; /* Enable scrolling within this element */
+        }
+
+        .input{
+            
+            bottom: 0;
+        }
+
+
+
+
     </style>
     <title>New Chat</title>
 </head>
@@ -106,6 +122,7 @@
                  </div>
             </div>
         </div>
+
         <div class="right2 w-full flex flex-col items-center h-fit">
             <div class="box1 m-auto py-7 flex justify-start w-[40vw] items-center space-x-6">
                 <img class="w-9" src="https://lh3.googleusercontent.com/a/AEdFTp60EAMGTWIYrHDJISrMOADg1QI3zjqKh5lM-3Mv=s96-c" alt="">
@@ -117,12 +134,12 @@
                 <div class="box w-[40vw] flex justify-start space-x-6">
                     <img class="w-9 h-9" src="https://lh3.googleusercontent.com/a/AEdFTp60EAMGTWIYrHDJISrMOADg1QI3zjqKh5lM-3Mv=s96-c" alt="">
                     <div class="flex space-y-4 flex-col">
-                        <div id="question1">
+                       <div id="question1">
                             Loading...
                         </div>
                         <div id="solution">
                             Loading...
-                        </div>
+                        </div> 
                     </div>
                 </div>    
             </div>
@@ -141,7 +158,6 @@
                  </div>
             </div>
         </div>
-
     </div>
     <script src="/static/js/script.js">
 
